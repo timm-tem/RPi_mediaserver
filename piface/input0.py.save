@@ -1,0 +1,4 @@
+
+import pifacedigitalio as p
+p.init()
+p.digital_read(0) 
