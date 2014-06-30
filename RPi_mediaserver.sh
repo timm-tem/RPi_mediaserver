@@ -20,6 +20,7 @@ do
         esac
 done
 
+killall olad &
 olad &
 ola_trigger -u $UNIVERSE -o $OFFSET /home/pi/RPi_mediaserver/scripts/trigger.conf &
 
