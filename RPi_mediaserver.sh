@@ -21,7 +21,7 @@ do
 done
 
 olad &
-ola_trigger -u $UNIVERSE -o $OFFSET /home/pi/scripts/trigger.conf &
+ola_trigger -u $UNIVERSE -o $OFFSET /home/pi/RPi_mediaserver/scripts/trigger.conf &
 
 
 echo "OLA Trigger is running using universe "$UNIVERSE" and channel "$OFFSET" "

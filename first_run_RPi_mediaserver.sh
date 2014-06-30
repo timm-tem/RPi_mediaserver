@@ -18,7 +18,7 @@
     
 #!/bin/bash
 
-SCRIPTS=/home/pi/scripts
+SCRIPTS=/home/pi/RPi_mediaserver/scripts
 
 $SCRIPTS/ola_git_firstrun.sh
 echo "OLA successfully downloaded and installed for the first time from GIT REPO"

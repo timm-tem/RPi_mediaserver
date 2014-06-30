@@ -18,7 +18,7 @@
     
 #!/bin/bash
 
-SCRIPTS=/home/pi/scripts
+SCRIPTS=/home/pi/RPi_mediaserver/scripts
 
 $SCRIPTS/ola_git_update.sh
 echo "OLA updated from GIT REPO"
