@@ -30,6 +30,15 @@ MEDIA=/media/usb
 APP=python3
 PIFACE=/home/pi/piface
 
+# Variables for first_run and update RPi_mediaserver
+SCRIPTS=/home/pi/scripts
+
+# Variables for ola_git_XXX
+OLA_DIR=/home/pi/ola
+
+# Variables for RPi_mediaserver_git_XXX
+RPMS_DIR=/home/pi/RPi_mediaserver
+
 
 
 exit 

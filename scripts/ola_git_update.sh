@@ -18,10 +18,10 @@
     
 #!/bin/bash
 
-GIT_DIR=/home/pi/ola
+OLA_DIR=/home/pi/ola
 
 sudo /etc/init.d/olad stop
-cd $GIT_DIR
+cd $OLA_DIR
 git pull
 autoreconf
 ./configure --enable-rdm-tests --enable-python-libs

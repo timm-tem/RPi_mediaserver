@@ -1,4 +1,4 @@
-#<one line to give the program's name and a brief idea of what it does.>
+# RPi_mediaserver FIRST RUN SCRIPT
 #    
 #	Copyright (C) <year>  Tim Massey
 #
@@ -18,12 +18,9 @@
     
 #!/bin/bash
 
-LOG_DIR=/var/log
-# Variables are better than hard-coded values.
-cd $LOG_DIR
+SCRIPTS=/home/pi/scripts
 
-echo "Logs cleaned up."
+$SCRIPTS/ola_git_firstrun.sh
+echo "OLA successfully downloaded and installed for the first time from GIT REPO"
 
-exit #  The right and proper method of "exiting" from a script.
-     #  A bare "exit" (no parameter) returns the exit status
-     #+ of the preceding command. 
+exit 

@@ -1,6 +1,6 @@
-# THIS IS A SCRIPT TO CLONE OLA GIT REPO AND MAKE & INSTALL IT
+# RPi_mediaserver UPDATE SCRIPT
 #    
-#	Copyright (C) 2014  Tim Massey
+#	Copyright (C) <year>  Tim Massey
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -18,19 +18,12 @@
     
 #!/bin/bash
 
-OLA_DIR=/home/pi/ola
+SCRIPTS=/home/pi/scripts
 
-mkdir $OLA_DIR
-git clone https://github.com/OpenLightingProject/ola.git ola
-cd $OLA_DIR
-autoreconf -i
-./configure --enable-rdm-tests --enable-python-libs
-make
-make check
-sudo make install
-sudo ldconfig
-sudo /etc/init.d/olad start
+$SCRIPTS/ola_git_update.sh
+echo "OLA updated from GIT REPO"
 
-echo "OLA successfully downloaded and installed for the first time from GIT REPO"
+$SCRIPTS/RPi_mediaserver_git_update.sh
+echo "RPi_mediaserver updated from GIT REPO"
 
 exit 

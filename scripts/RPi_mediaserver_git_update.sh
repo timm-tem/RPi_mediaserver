@@ -1,6 +1,6 @@
-#<one line to give the program's name and a brief idea of what it does.>
+# THIS IS A SCRIPT TO UPDATE OLA FROM THE GIT REPO
 #    
-#	Copyright (C) <year>  Tim Massey
+#	Copyright (C) 2014  Tim Massey
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -18,12 +18,15 @@
     
 #!/bin/bash
 
-LOG_DIR=/var/log
-# Variables are better than hard-coded values.
-cd $LOG_DIR
+RPMS_DIR=/home/pi/RPi_mediaserver
+HOME=/home/pi
 
-echo "Logs cleaned up."
+cd $RPMS_DIR
+git pull
 
-exit #  The right and proper method of "exiting" from a script.
-     #  A bare "exit" (no parameter) returns the exit status
-     #+ of the preceding command. 
+# mv -rf $RPMS_DIR/* $HOME
+# echo "Moved RPi_mediaserver files"
+
+echo "RPi_mediaserver is now updated from the GIT REPO"
+
+exit 
