@@ -1,4 +1,4 @@
-# THIS IS THE PYTHON CODE FOR PiFACE OUTPUT ON
+# THIS IS A SCRIPT TO CLONE OLA GIT REPO AND MAKE & INSTALL IT
 #    
 #	Copyright (C) 2014  Tim Massey
 #
@@ -15,9 +15,22 @@
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #    Also add information on how to contact you by electronic and paper mail.
-  
-#!/usr/bin/python
+    
+#!/bin/bash
 
-import pifacedigitalio
-pifacedigital = pifacedigitalio.PiFaceDigital()
-pifacedigital.output_pins[1].turn_on()  
+GIT_DIR=/home/pi/ola
+
+mkdir $GIT_DIR
+git clone https://github.com/OpenLightingProject/ola.git ola
+cd $GIT_DIR
+autoreconf -i
+./configure --enable-rdm-tests --enable-python-libs
+make
+make check
+sudo make install
+sudo ldconfig
+sudo /etc/init.d/olad start
+
+echo "OLA successfully downloaded and installed for the first time from GIT REPO"
+
+exit 

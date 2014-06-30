@@ -1,2 +1,0 @@
-killall /opt/vc/src/hello_pi/hello_video/hello_video.bin
-/opt/vc/src/hello_pi/hello_video/hello_video.bin /media/usb0/016.raw

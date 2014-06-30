@@ -1,4 +1,4 @@
-# THIS IS THE PYTHON CODE FOR PiFACE OUTPUT ON
+# THIS IS THE VARIABLE FILE
 #    
 #	Copyright (C) 2014  Tim Massey
 #
@@ -15,9 +15,23 @@
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #    Also add information on how to contact you by electronic and paper mail.
-  
-#!/usr/bin/python
+    
+#!/bin/bash
 
-import pifacedigitalio
-pifacedigital = pifacedigitalio.PiFaceDigital()
-pifacedigital.output_pins[1].turn_on()  
+# Variables for media_server script
+UNIVERSE=7  
+OFFSET=511
+
+# Variables for values scripts
+APP=/opt/vc/src/hello_pi/hello_video/hello_video.bin
+MEDIA=/media/usb
+
+# Variables for piface
+APP=python3
+PIFACE=/home/pi/piface
+
+
+
+exit 
+
+

@@ -1,4 +1,4 @@
-# THIS IS THE PYTHON CODE FOR PiFACE OUTPUT ON
+# THIS IS A SCRIPT TO PLAY VIDEO FILES
 #    
 #	Copyright (C) 2014  Tim Massey
 #
@@ -15,9 +15,15 @@
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #    Also add information on how to contact you by electronic and paper mail.
-  
-#!/usr/bin/python
+    
+#!/bin/bash
 
-import pifacedigitalio
-pifacedigital = pifacedigitalio.PiFaceDigital()
-pifacedigital.output_pins[1].turn_on()  
+APP=/opt/vc/src/hello_pi/hello_video/hello_video.bin
+MEDIA=/media/usb0
+
+killall $APP
+$APP $MEDIA/020.raw
+
+echo "Playing Video 020"
+
+exit 

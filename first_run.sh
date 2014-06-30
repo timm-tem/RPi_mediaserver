@@ -1,6 +1,6 @@
-# THIS IS THE PYTHON CODE FOR PiFACE OUTPUT ON
+#<one line to give the program's name and a brief idea of what it does.>
 #    
-#	Copyright (C) 2014  Tim Massey
+#	Copyright (C) <year>  Tim Massey
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -15,9 +15,15 @@
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #    Also add information on how to contact you by electronic and paper mail.
-  
-#!/usr/bin/python
+    
+#!/bin/bash
 
-import pifacedigitalio
-pifacedigital = pifacedigitalio.PiFaceDigital()
-pifacedigital.output_pins[1].turn_on()  
+LOG_DIR=/var/log
+# Variables are better than hard-coded values.
+cd $LOG_DIR
+
+echo "Logs cleaned up."
+
+exit #  The right and proper method of "exiting" from a script.
+     #  A bare "exit" (no parameter) returns the exit status
+     #+ of the preceding command. 

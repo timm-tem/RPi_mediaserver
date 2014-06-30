@@ -1,19 +1,25 @@
+# THIS IS THE PYTHON CODE FOR PiFACE INPUT 
+#    
+#	Copyright (C) 2014  Tim Massey
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#    Also add information on how to contact you by electronic and paper mail.
+  
+#!/usr/bin/python
+
 import pifacedigitalio
 pifacedigital = pifacedigitalio.PiFaceDigital()
-
-# without anything pressed
-pifacedigital.input_port.value
-
-pifacedigital.input_pins[0].value
-
-pifacedigital.switches[0].value
-
-# pressing the third switch
-pifacedigital.input_port.value
-
-bin(pifacedigital.input_port.value)
-
-pifacedigital.input_pins[2].value  # this command is the same as...
-
-pifacedigital.switches[2].value  # ...this command
-
+input = pifacedigital.input_pins[0].value
+with open(input0state.sh, 'a') as out:
+    out.write(input + '\n')

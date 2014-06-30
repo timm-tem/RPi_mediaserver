@@ -1,4 +1,4 @@
-# THIS IS THE PYTHON CODE FOR PiFACE OUTPUT ON
+# THIS IS A SCRIPT TO UPDATE OLA FROM THE GIT REPO
 #    
 #	Copyright (C) 2014  Tim Massey
 #
@@ -15,9 +15,21 @@
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #    Also add information on how to contact you by electronic and paper mail.
-  
-#!/usr/bin/python
+    
+#!/bin/bash
 
-import pifacedigitalio
-pifacedigital = pifacedigitalio.PiFaceDigital()
-pifacedigital.output_pins[1].turn_on()  
+GIT_DIR=/home/pi/ola
+
+sudo /etc/init.d/olad stop
+cd $GIT_DIR
+git pull
+autoreconf
+./configure --enable-rdm-tests --enable-python-libs
+make
+sudo make install
+sudo ldconfig
+sudo /etc/init.d/olad start
+
+echo "OLA updated from GIT REPO"
+
+exit 
