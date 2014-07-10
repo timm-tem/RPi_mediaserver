@@ -20,6 +20,8 @@
 
 OLA_DIR=/home/pi/ola
 
+sudo apt-get install libcppunit-dev libcppunit-1.12-1 uuid-dev pkg-config libncurses5-dev libtool autoconf automake  g++ libmicrohttpd-dev libmicrohttpd10 protobuf-compiler libprotobuf-lite7 python-protobuf libprotobuf-dev libprotoc-dev zlib1g-dev bison flex make libftdi-dev  libftdi1 libusb-1.0-0-dev liblo-dev libavahi-client-dev
+
 mkdir $OLA_DIR
 git clone https://github.com/OpenLightingProject/ola.git ola
 cd $OLA_DIR

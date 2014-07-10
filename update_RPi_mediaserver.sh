@@ -26,4 +26,7 @@ echo "OLA updated from GIT REPO"
 $SCRIPTS/RPi_mediaserver_git_update.sh
 echo "RPi_mediaserver updated from GIT REPO"
 
+$SCRIPTS/ola-rpiui_git_update.sh
+echo "OLA-RPIUI updated from GIT REPO"
+
 exit 
