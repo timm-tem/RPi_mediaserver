@@ -15,7 +15,7 @@
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #    Also add information on how to contact you by electronic and paper mail.
-    
+
 #!/bin/bash
 
 echo "Installing OLA dependencies"
@@ -29,8 +29,6 @@ echo "Installed OLA dependencies"
 echo "Installing OLA"
 
 OLA_DIR=/home/pi/ola
-
-sudo apt-get install libcppunit-dev libcppunit-1.12-1 uuid-dev pkg-config libncurses5-dev libtool autoconf automake  g++ libmicrohttpd-dev libmicrohttpd10 protobuf-compiler libprotobuf-lite7 python-protobuf libprotobuf-dev libprotoc-dev zlib1g-dev bison flex make libftdi-dev  libftdi1 libusb-1.0-0-dev liblo-dev libavahi-client-dev
 
 mkdir $OLA_DIR
 git clone https://github.com/OpenLightingProject/ola.git ola
