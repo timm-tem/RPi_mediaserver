@@ -21,6 +21,7 @@
 RPMS_DIR=/home/pi/RPi_mediaserver
 HOME=/home/pi
 
+cd 
 cd $RPMS_DIR
 git pull
 

@@ -23,7 +23,7 @@ CYTHON_DIR=/home/pi/cython
 
 echo "Installing CYTHON"
 
-cd ..
+cd 
 mkdir $CYTHON_DIR
 cd $CYTHON_DIR
 sudo pip install --upgrade cython
@@ -32,7 +32,7 @@ echo "Installed CYTHON"
 
 echo "KIVY updating from GIT REPO"
 
-cd ..
+cd 
 cd $KIVY_DIR
 git pull
 python setup.py build_ext --inplace -f

@@ -21,6 +21,7 @@
 OLA_DIR=/home/pi/ola
 
 sudo /etc/init.d/olad stop
+cd
 cd $OLA_DIR
 git pull
 autoreconf

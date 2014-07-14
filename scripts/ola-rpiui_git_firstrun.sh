@@ -18,9 +18,10 @@
     
 #!/bin/bash
 
-OLA-RPIUI_DIR=/home/pi/ola-rpiui
+OLA_RPIUI_DIR=/home/pi/ola-rpiui
 
-mkdir $OLA-RPIUI_DIR
+cd
+mkdir $OLA_RPIUI_DIR
 git clone https://github.com/jesseanderson/ola-rpiui.git
 
 echo "OLA-RPIUI successfully downloaded and installed for the first time from GIT REPO"

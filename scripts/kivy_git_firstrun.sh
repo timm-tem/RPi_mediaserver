@@ -34,7 +34,7 @@ echo "Installed dependancies"
 
 echo "Installing CYTHON"
 
-cd ..
+cd 
 mkdir $CYTHON_DIR
 cd $CYTHON_DIR
 sudo pip install --upgrade cython
@@ -43,7 +43,7 @@ echo "Installed CYTHON"
 
 echo "KIVY downloading and installed for the first time from GIT REPO"
 
-cd ..
+cd 
 git clone git://github.com/kivy/kivy.git
 cd $KIVY_DIR
 python setup.py build_ext --inplace -f

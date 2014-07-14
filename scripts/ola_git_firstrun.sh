@@ -33,6 +33,7 @@ echo "Installing OLA"
 
 OLA_DIR=/home/pi/ola
 
+cd
 mkdir $OLA_DIR
 git clone https://github.com/OpenLightingProject/ola.git ola
 cd $OLA_DIR

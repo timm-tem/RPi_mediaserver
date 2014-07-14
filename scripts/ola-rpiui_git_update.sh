@@ -20,6 +20,7 @@
 
 OLA_DIR=/home/pi/ola-rpiui
 
+cd
 cd $OLA_DIR
 git pull
 
