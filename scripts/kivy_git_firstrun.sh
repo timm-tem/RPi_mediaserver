@@ -23,7 +23,12 @@ CYTHON_DIR=/home/pi/cython
 
 echo "Installing KIVY dependencies"
 
-sudo apt-get install python-setuptools python-pygame python-opengl python-gst0.10 python-enchant gstreamer0.10-plugins-good python-dev build-essential libgl1-mesa-dev libgles2-mesa-dev python-pip
+sudo apt-get clean
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install python-setuptools python-pygame python-opengl python-gst0.10 \
+python-enchant gstreamer0.10-plugins-good python-dev build-essential libgl1-mesa-dev \
+libgles2-mesa-dev python-pip
 
 echo "Installed dependancies"
 

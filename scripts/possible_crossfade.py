@@ -50,7 +50,7 @@ class Main:
         # setup first clip
         src1 = gst.element_factory_make("gnlfilesource")
         comp.add(src1)
-        src1.set_property("location", "/home/lane/work/sshow/src/test1.mp4")
+        src1.set_property("location", "/media/usd0/test1.mp4")
         src1.set_property("start",          0    * gst.MILLISECOND)
         src1.set_property("duration",       dur1 * gst.MILLISECOND)
         src1.set_property("media-start",    0    * gst.MILLISECOND)
@@ -60,7 +60,7 @@ class Main:
         # setup second clip
         src2 = gst.element_factory_make("gnlfilesource")
         comp.add(src2)
-        src2.set_property("location", "/home/lane/work/sshow/src/test2.mp4")
+        src2.set_property("location", "/media/usd0/test2.mp4")
         src2.set_property("start",  (dur1-dur_crossfade) * gst.MILLISECOND)
         src2.set_property("duration",       dur2 * gst.MILLISECOND)
         src2.set_property("media-start",    0    * gst.MILLISECOND)

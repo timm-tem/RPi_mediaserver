@@ -1,4 +1,4 @@
-# THIS IS A SCRIPT TO UPDATE OLA FROM THE GIT REPO
+# THIS IS A SCRIPT TO CLONE OLA-RPIUI GIT REPO AND MAKE & INSTALL IT
 #    
 #	Copyright (C) 2014  Tim Massey
 #
@@ -18,12 +18,26 @@
     
 #!/bin/bash
 
-RPMS_DIR=/home/pi/RPi_mediaserver
-HOME=/home/pi
+KIVY_DIR=/home/pi/kivy
+CYTHON_DIR=/home/pi/cython
 
-cd $RPMS_DIR
+echo "Installing CYTHON"
+
+cd ..
+mkdir $CYTHON_DIR
+cd $CYTHON_DIR
+sudo pip install --upgrade cython
+
+echo "Installed CYTHON"
+
+echo "KIVY updating from GIT REPO"
+
+cd ..
+cd $KIVY_DIR
 git pull
+python setup.py build_ext --inplace -f
+sudo python setup.py install
 
-echo "RPi_mediaserver is now updated from the GIT REPO"
+echo "KIVY successfully updated from GIT REPO"
 
 exit 

@@ -1,6 +1,6 @@
 # RPi_mediaserver FIRST RUN SCRIPT
 #    
-#	Copyright (C) <year>  Tim Massey
+#	Copyright (C) 2014  Tim Massey
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -20,7 +20,17 @@
 
 SCRIPTS=/home/pi/RPi_mediaserver/scripts
 
+sudo apt-get clean
+sudo apt-get update
+sudo apt-get upgrade
+
+$SCRIPTS/kivy_git_firstrun.sh
+echo "KIVY successfully downloaded and installed for the first time from GIT REPO"
+
 $SCRIPTS/ola_git_firstrun.sh
 echo "OLA successfully downloaded and installed for the first time from GIT REPO"
+
+$SCRIPTS/ola-rpiui_git_firstrun.sh
+echo "OLA-RPIUI successfully downloaded and installed for the first time from GIT REPO"
 
 exit 
