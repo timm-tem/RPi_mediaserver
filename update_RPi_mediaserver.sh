@@ -1,5 +1,5 @@
 # RPi_mediaserver UPDATE SCRIPT
-#    
+#
 #	Copyright (C) 2014  Tim Massey
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -15,7 +15,6 @@
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #    Also add information on how to contact you by electronic and paper mail.
-    
 #!/bin/bash
 
 SCRIPTS=/home/pi/RPi_mediaserver/scripts
@@ -25,15 +24,11 @@ sudo apt-get update
 sudo apt-get upgrade
 
 $SCRIPTS/kivy_git_update.sh
-echo "KIVY updated from GIT REPO"
 
 $SCRIPTS/ola_git_update.sh
-echo "OLA updated from GIT REPO"
 
 $SCRIPTS/ola-rpiui_git_update.sh
-echo "OLA-RPIUI updated from GIT REPO"
 
 $SCRIPTS/RPi_mediaserver_git_update.sh
-echo "RPI MEDIASERVER updated from GIT REPO"
 
 exit 
